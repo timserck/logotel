@@ -41,7 +41,7 @@ export const Articles : React.FC<ArticlesProps> = (props) => {
           <div className="article_data">
             <span className="article_date font_robotoMono">{article.date}</span>
             <h2 className="article_title font_robotoMono"> {article.title} </h2>
-            <p className="article_txt font_roboto">{article.txt}</p>
+            <p className="article_txt">{article.txt}</p>
           </div>
 
         </footer>
