@@ -1,0 +1,10 @@
+.btn {
+    border: none;
+    &_primary {
+        background: var(--color-pink);
+        color: white;
+        border-radius: 16px;
+        padding: 19px 18px 17px 19px;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,77 @@
+.carousel {
+    .control-dots {
+        margin: 0;
+        top: calc(40px + var(--height-header));
+        left: 0;
+        position: absolute;
+        width: auto;
+        bottom: unset;
+    }
+    .control-dot {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            height: 100%;
+            width: 100%;
+            background: none;
+            box-shadow: none;
+            border: none;
+            background: var(--color-pink);
+            color: white;
+            cursor: pointer;
+            opacity: 50%;
+            &:disabled,
+            &[disabled] {
+                opacity: 100%;
+            }
+        }
+    }
+}
+
+.arrow {
+    z-index: 2;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &_prev {
+        left: 90px;
+    }
+    &_next {
+        right: 90px;
+    }
+}
+
+.slide {
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 818px;
+    &_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &_wrapper {
+        text-align: left;
+        padding-top: calc(var(--height-header) + 55px);
+        padding-bottom: 77px;
+        margin-Left: 173px;
+        width: 547px;
+    }
+    &_title {}
+    &_txt {
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,32 @@
+//typo
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../../Assets/Fonts/Helvetica/helvetica-01-webfont.woff2') format('woff2'), url('../../Assets/Fonts/Helvetica/helvetica-01-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.display {
+    &-1 {
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 1.333;
+    }
+    &-2 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+
+.font {
+    &_helvetica {
+        font-family: "helveticaregular, sans-serif";
+    }
+    &_roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+    &_robotoMono {
+        font-family: 'Roboto Mono', monospace;
+    }
+}

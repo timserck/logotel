@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useLayoutEffect } from "react"
+import './App.scss';
+import { Header, Slider, Articles, Timeline, Cards, Footer } from './Components';
 
 function App() {
+
+  const [scrolled, setScrolled] = useState(false)
+
+  useLayoutEffect(() => {
+    const handleScroll = (e:Event) => {
+
+      setScrolled(window.scrollY > 0)
+      window.scrollY > 0 ? document.documentElement.style.setProperty("--height-header", "70px") : document.documentElement.style.setProperty("--height-header", "120px")
+      window.scrollY > 0 ? document.documentElement.style.setProperty("--height-logo", "40px") : document.documentElement.style.setProperty("--height-logo", "60px")
+
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={`${scrolled ? "isScrolled" : ""} main`}>
+      <Header/>
+      <Slider/>
+      <Articles/>
+      <Timeline/>
+      <Cards/>
+      <Footer/>
+    </main>
   );
 }
 
