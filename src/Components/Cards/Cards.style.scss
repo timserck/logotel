@@ -1,0 +1,88 @@
+.cards {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 145px;
+    width: 100%;
+    &_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_decorator {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #FFF;
+    padding: 33px 40px;
+    &_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 24px;
+        margin-top: 34px;
+    }
+    &_title {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 34px;
+        padding-bottom: 17px;
+    }
+    &_separator {
+        height: 2px;
+        width: 100%;
+    }
+    &_icon {
+        height: 234px;
+        width: 234px;
+        display: block;
+        margin-bottom: 33px;
+        position: relative;
+        z-index: 1;
+    }
+    &_round {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        &::before {
+            mix-blend-mode: light;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            position: absolute;
+            content: "";
+            background: white;
+            border-radius: 50%;
+            opacity: .2;
+        }
+    }
+    &_txt {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_cta {
+        font-weight: 700;
+    }
+}

@@ -1,10 +1,14 @@
 .btn {
     border: none;
     &_primary {
-        background: var(--color-pink);
+        background: var(--color-rosa);
         color: white;
         border-radius: 16px;
         padding: 19px 18px 17px 19px;
         text-transform: uppercase;
+        &-rosa {
+            background: var(--color-rosa);
+            color: white;
+        }
     }
 }

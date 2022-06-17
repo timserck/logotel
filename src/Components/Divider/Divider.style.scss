@@ -1,0 +1,40 @@
+.divider {
+    margin-top: -80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    // overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    min-height: 556px;
+    padding: 0 4.86111111111% 180px 4.86111111111%;
+    &-inverse {
+        justify-content: flex-start;
+        padding: 180px 4.86111111111% 0 4.86111111111%;
+    }
+    &_onda {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        &-inverse {
+            transform: scale(-1);
+        }
+    }
+    &_title {
+        color: var(--color-rosa);
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        width: 60.625%;
+        max-width: 873px;
+        padding-bottom: 40px;
+        text-align: right;
+        &-inverse {
+            text-align: left;
+            padding-top: 40px;
+            padding-bottom: 0px;
+        }
+    }
+}

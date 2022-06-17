@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react"
 import './App.scss';
-import { Header, Slider, Articles, Timeline, Cards, Footer } from './Components';
+import { Header, Slider, Articles, Timeline, Cards, Footer, Divider } from './Components';
 
 function App() {
 
@@ -27,7 +27,9 @@ function App() {
       <Header/>
       <Slider/>
       <Articles/>
+      <Divider/>
       <Timeline/>
+      <Divider onda="inverse"/>
       <Cards/>
       <Footer/>
     </main>

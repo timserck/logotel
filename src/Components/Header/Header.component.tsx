@@ -16,7 +16,7 @@ export const Header : React.FC<HeaderProps> = (props) => {
   return (
     <header className="header">
 
-      <div className="header_wrapper">
+      <div className="header_wrapper l-container">
         <Logo className="logo"/>
         <nav className=" header_menu menu">
             <ul className="menuUl">

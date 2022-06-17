@@ -15,7 +15,7 @@ export const Slider : React.FC<SliderProps> = (props) => {
 
   const slides = [
     {
-      img: "slider-1.png",
+      img: "slider-1.jpg",
       alt: "https://picsum.photos/350/150",
       title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
       txt : "sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
@@ -90,7 +90,7 @@ export const Slider : React.FC<SliderProps> = (props) => {
               <div className="slide_wrapper">
                 <h1 className='slide_title display-1'>{slide.title}</h1>
                 <p className='slide_txt display-2 '>{slide.txt}</p>
-                <button className="btn btn_primary display-2">Call to Action</button>
+                <button className="btn btn_primary btn_primary-red display-2">Call to Action</button>
               </div>
             </div>
           ))}

@@ -4,6 +4,7 @@ import { Footer } from "./Footer/Footer.component";
 import { Timeline } from "./Timeline/Timeline.component";
 import { Cards } from "./Cards/Cards.component";
 import { Articles } from "./Articles/Articles.component";
+import { Divider } from "./Divider/Divider.component";
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     Cards,
     Timeline,
     Footer,
-    Slider
+    Slider,
+    Divider
 };
