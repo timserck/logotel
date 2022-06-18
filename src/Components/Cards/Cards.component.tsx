@@ -54,7 +54,7 @@ export const Cards: React.FC<CardsProps> = (props) => {
   return (
     <article id="tab" className="cards ">
 
-      <div className="cards_container l-container l-grid">
+      <div className="cards_container l-container l-container-padding l-grid">
 
 
 

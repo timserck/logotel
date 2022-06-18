@@ -1,12 +1,15 @@
-import React, { useState, useLayoutEffect } from "react"
+import React, { useState, useLayoutEffect, useEffect } from "react"
 import './App.scss';
 import { Header, Slider, Articles, Timeline, Cards, Footer, Divider } from './Components';
 
 function App() {
 
   const [scrolled, setScrolled] = useState(false)
+  const tabs = ["slider","news", "percorso", "tab"]
+
 
   useLayoutEffect(() => {
+ 
     const handleScroll = (e:Event) => {
 
       setScrolled(window.scrollY > 0)
@@ -24,7 +27,7 @@ function App() {
 
   return (
     <main className={`${scrolled ? "isScrolled" : ""} main`}>
-      <Header/>
+      <Header tabs={tabs}/>
       <Slider/>
       <Articles/>
       <Divider/>

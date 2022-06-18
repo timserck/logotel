@@ -46,6 +46,14 @@ export const Slider : React.FC<SliderProps> = (props) => {
     showThumbs : false,
     showStatus : false,
     showIndicators: true,
+    autoPlay: true,
+    stopOnHover: true,
+    emuulateTouch: true,
+    swipeable: true,
+    infiniteLoop: true,
+    transitionTime: 500,
+    swipeScrollTolerance: 5,
+    interval: 5000,
 
     renderArrowPrev : (onClickHandler :any, hasPrev : boolean, label : string) => {
       return (

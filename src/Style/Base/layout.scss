@@ -1,8 +1,10 @@
 .l {
     &-container {
         max-width: 1440px;
-        padding: 0 60px;
         margin: 0 auto;
+        &-padding {
+            padding: 0 60px;
+        }
     }
     &-grid {
         &_col {

@@ -5,10 +5,12 @@
     --color-card-txt: #464646;
     --color-black: #272727;
     --color-card-footer: #F3F3F3;
-    --color-d-timeline: linear-gradient(180deg, #272727 0%, #464646 100%);
+    --color-d-timeline: linear-gradient(180deg, var(--color-black) 0%, var(--color-black) 5%, var(--color-card-txt) 95%, var(--color-card-txt) 100%);
     --color-d-pink: linear-gradient(180deg, rgba(237, 101, 98, 0.3) 0%, rgba(237, 101, 98, 1) 100%);
     --color-d-grey: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, rgba(39, 39, 39, 1) 100%);
     --color-card-date: #838080;
     --color-gialla: #E2CA40;
+    --color-point-yellow: #FFED65;
+    --color-point-turchese: #44E0DC;
     --color-turchese: #28AFB0;
 }

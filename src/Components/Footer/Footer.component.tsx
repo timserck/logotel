@@ -60,7 +60,7 @@ export const Footer : React.FC<FooterProps> = (props) => {
 
   return (
     <footer className="footer">
-      <div className="l-container footer_container">
+      <div className="l-container l-container-padding footer_container">
         <div className="footer_left">
           <Logo className="footer_logo"/>
           <ul className="footer_links">

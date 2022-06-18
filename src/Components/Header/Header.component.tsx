@@ -5,18 +5,20 @@ import "./Header.style.scss";
 
 export interface HeaderProps {
 
+  tabs : Array<String>
+
 }
 
 export const Header : React.FC<HeaderProps> = (props) => {
 
-    const tabs = ["slider","news", "percorso", "tab"]
+  const {tabs} = props;
 
-   const [currentSection, setCurrentSection] = useState("slider")
+  const [currentSection, setCurrentSection] = useState("slider")
 
   return (
     <header className="header">
 
-      <div className="header_wrapper l-container">
+      <div className="header_wrapper l-container l-container-padding">
         <Logo className="logo"/>
         <nav className=" header_menu menu">
             <ul className="menuUl">

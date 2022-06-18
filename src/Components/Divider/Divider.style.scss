@@ -20,6 +20,12 @@
         height: auto;
         &-inverse {
             transform: scale(-1);
+            #Fill-9 {
+                fill: #464646;
+            }
+            line {
+                display: none;
+            }
         }
     }
     &_title {
