@@ -56,8 +56,6 @@ export const Footer : React.FC<FooterProps> = (props) => {
 
   ]
 
-
-
   return (
     <footer className="footer">
       <div className="l-container l-container-padding footer_container">
@@ -65,7 +63,7 @@ export const Footer : React.FC<FooterProps> = (props) => {
           <Logo className="footer_logo"/>
           <ul className="footer_links">
           {links.map((link , index)=> (
-            <li className="footer_li">
+            <li key={index} className="footer_li">
               <a href={link.href} className="footer_a font_robotoMono">
               {link.txt} 
               </a>
@@ -83,7 +81,7 @@ export const Footer : React.FC<FooterProps> = (props) => {
           </p>
           <ul className="footer_rss">
           {rss.map((rs , index)=> (
-            <li className="footer_rssLi">
+            <li key={index} className="footer_rssLi">
               <a className="footer_rssA" href={rs.href} >
                 {rs.icon}
               </a>

@@ -7,11 +7,9 @@ import  "./Slider.style.scss";
 
 
 export interface SliderProps {
-
 }
 
 export const Slider : React.FC<SliderProps> = (props) => {
-
 
   const slides = [
     {
@@ -90,7 +88,7 @@ export const Slider : React.FC<SliderProps> = (props) => {
   }
   }
   return (
-    <section id="slider" className="slider">
+    <section  id="slider" className="slider">
         <Carousel  {...config} >
         {slides.map((slide , index)=> (
             <div key={index} className='sliderC_slide slide'>

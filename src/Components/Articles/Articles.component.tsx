@@ -31,7 +31,9 @@ export const Articles : React.FC<ArticlesProps> = (props) => {
   ]
 
   return (
+    
     <article id="news" className="articles l-container l-container-padding l-grid">
+     {/* <p>{`Je suis visible ${isVisible}`}</p> */}
         {articles.map((article , index)=> (
       <div key={index} className="article l-grid_col l-grid_col-3">
         <header className="article_header">

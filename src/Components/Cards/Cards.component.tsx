@@ -4,14 +4,26 @@ import { ReactComponent as Razzo } from '../../Assets/Tab/razzo.svg';
 import { ReactComponent as Sveglia } from '../../Assets/Tab/sveglia.svg';
 import { ReactComponent as Target } from '../../Assets/Tab/target.svg';
 import { ReactComponent as Grafica } from '../../Assets/Tab/grafica_sfondo.svg';
+// import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
 
 export interface CardsProps {
-
+  // handleIsVisible : (index:number) => void
 }
 
 
-
 export const Cards: React.FC<CardsProps> = (props) => {
+
+//   const ref = useRef<HTMLDivElement | null>(null)
+// const entry = useIntersectionObserver(ref, {})
+// const isVisible : boolean = !!entry?.isIntersecting
+// const {handleIsVisible} = props
+
+
+// useEffect(() => {
+//   if(isVisible === true){
+//     handleIsVisible(3)
+//   }
+// }, [isVisible])
 
   function getColorCard(color: string) {
     return `var(--color-${color})`
@@ -52,11 +64,9 @@ export const Cards: React.FC<CardsProps> = (props) => {
   ]
 
   return (
-    <article id="tab" className="cards ">
+    <article  className="cards">
 
       <div className="cards_container l-container l-container-padding l-grid">
-
-
 
         {dataCards.map((card, index) => (
 

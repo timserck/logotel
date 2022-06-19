@@ -8,13 +8,10 @@ import {ReactComponent as Step4} from '../..//Assets/Timeline/icon-4.svg';
 import {ReactComponent as Step5} from '../..//Assets/Timeline/icon-5.svg';
 import {ReactComponent as Step6} from '../..//Assets/Timeline/icon-6.svg';
 
-
 export interface TimelineProps {
-
 }
 
 export const Timeline: React.FC<TimelineProps> = (props) => {
-
 
   const steps = [
     {
@@ -89,7 +86,7 @@ export const Timeline: React.FC<TimelineProps> = (props) => {
   ]
 
   return (
-    <section id="percorso" className="section section-timeline timeline">
+    <section className="section section-timeline timeline">
       <div className="timeline_container l-container ">
         {steps.map((step, index) => (
           <details key={index} className='details'>
