@@ -7,6 +7,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width: 1128px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            // align-items: center;
+        }
     }
     &_decorator {
         width: 100%;
@@ -21,6 +26,14 @@
     border-radius: 20px;
     background-color: #FFF;
     padding: 33px 40px;
+    @media only screen and (max-width: 1128px) {
+        width: calc(50% - 1.38888888889%);
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
     &_body {
         display: flex;
         flex-direction: column;
@@ -44,10 +57,31 @@
     &_icon {
         height: 234px;
         width: 234px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 33px;
         position: relative;
         z-index: 1;
+        svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        // @media only screen and (max-width: 1024px) {
+        //     height: 200px;
+        //     width: 200px;
+        //     svg {
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         height: 100%;
+        //         width: auto;
+        //         display: block;
+        //         margin: 0 auto;
+        //         ;
+        //     }
+        // }
     }
     &_round {
         z-index: -1;
@@ -76,6 +110,10 @@
         text-align: center;
         font-size: 16px;
         line-height: 24px;
+        // overflow: hidden;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 3;
+        // -webkit-box-orient: vertical;
     }
     &_footer {
         display: flex;

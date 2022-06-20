@@ -5,6 +5,7 @@ import { Header, Slider, Articles, Timeline, Cards, Footer, Divider } from './Co
 function App() {
   const TABS = ["slider","news", "percorso", "tab"]
   const HEIGHT_NAV = 70;
+  const [isHam, setIsHam] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentSection, setCurrentSection] = useState(0)
 
@@ -24,6 +25,10 @@ function App() {
     setSectionOffsets(offsets)
   }
 
+  function isHamCallback(){
+    setIsHam(!isHam)
+  }
+
 
 useEffect(() => {
   getOffsetTopOfSections()
@@ -38,8 +43,8 @@ useEffect(() => {
     const handleScroll = (e:Event) => {
 
       setScrolled(window.scrollY > 0)
-      window.scrollY > 0 ? document.documentElement.style.setProperty("--height-header", "70px") : document.documentElement.style.setProperty("--height-header", "120px")
-      window.scrollY > 0 ? document.documentElement.style.setProperty("--height-logo", "40px") : document.documentElement.style.setProperty("--height-logo", "60px")
+     !isHam ||  window.scrollY > 0 ? document.documentElement.style.setProperty("--height-header", "70px") : document.documentElement.style.setProperty("--height-header", "120px")
+     !isHam ||  window.scrollY > 0 ? document.documentElement.style.setProperty("--height-logo", "40px") : document.documentElement.style.setProperty("--height-logo", "60px")
 
       const currentIndex = sectionOffsets.findIndex((n: Number) => n >= window.scrollY) - 1
       const currentSection = currentIndex === -1 ? 0 : currentIndex
@@ -60,7 +65,7 @@ useEffect(() => {
 
   return (
     <main className={`${scrolled ? "isScrolled" : ""} main`}>
-      <Header tabs={TABS} indexActive={currentSection}/>
+      <Header  tabs={TABS} indexActive={currentSection} isHamCallback={isHamCallback}/>
       <Slider  />
       <Articles />
       <Divider />

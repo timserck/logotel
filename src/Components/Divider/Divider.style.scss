@@ -1,4 +1,13 @@
 .divider {
+    @media only screen and (max-width: 768px) {
+        min-height: 256px;
+        padding: 0 4.86111111111% 80px 4.86111111111%;
+    }
+    @media only screen and (max-width: 1024px) {
+        padding: 0 4.86111111111% 120px 4.86111111111%;
+        min-height: auto;
+        margin-top: -1px;
+    }
     margin-top: -80px;
     display: flex;
     justify-content: flex-end;
@@ -11,6 +20,12 @@
     &-inverse {
         justify-content: flex-start;
         padding: 180px 4.86111111111% 0 4.86111111111%;
+        @media only screen and (max-width: 1024px) {
+            padding: 120px 4.86111111111% 0 4.86111111111%;
+        }
+        @media only screen and (max-width: 768px) {
+            padding: 80px 4.86111111111% 0 4.86111111111%;
+        }
     }
     &_onda {
         position: absolute;
@@ -19,6 +34,7 @@
         width: 100%;
         height: auto;
         &-inverse {
+            top: 0;
             transform: scale(-1);
             #Fill-9 {
                 fill: #464646;
@@ -29,6 +45,18 @@
         }
     }
     &_title {
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+            max-width: 510px;
+            font-size: 40px;
+            line-height: 60px;
+        }
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+            max-width: 465px;
+            padding-bottom: 20px;
+            font-size: 32px;
+        }
         color: var(--color-rosa);
         font-weight: 700;
         font-size: 60px;

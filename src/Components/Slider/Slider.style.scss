@@ -1,5 +1,9 @@
 .carousel {
+    position: relative;
     .control-dots {
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
         margin: 0;
         top: calc(40px + var(--height-header));
         left: 0;
@@ -32,18 +36,26 @@
 }
 
 .arrow {
+    padding: 0;
     z-index: 2;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
     &_prev {
         left: 90px;
+        transform: translate(50%, -50%);
+        @media only screen and (max-width: 768px) {
+            left: 5px;
+        }
     }
     &_next {
         right: 90px;
+        transform: translate(-50%, -50%);
+        @media only screen and (max-width: 768px) {
+            right: 5px;
+        }
     }
 }
 
@@ -53,6 +65,14 @@
     overflow: hidden;
     width: 100%;
     min-height: 818px;
+    @media only screen and (max-width: 768px) {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &_title {}
     &_img {
         position: absolute;
         top: 0;
@@ -63,13 +83,20 @@
         object-fit: cover;
     }
     &_wrapper {
+        @media only screen and (max-width: 768px) {
+            margin-Left: 0;
+            padding: 0 65px;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
         text-align: left;
         padding-top: calc(var(--height-header) + 55px);
         padding-bottom: 77px;
         margin-Left: 173px;
-        width: 547px;
+        max-width: 547px;
     }
-    &_title {}
     &_txt {
         margin-bottom: 60px;
         margin-top: 60px;

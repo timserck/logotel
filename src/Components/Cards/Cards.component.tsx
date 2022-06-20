@@ -86,7 +86,7 @@ export const Cards: React.FC<CardsProps> = (props) => {
 
 
               </div>
-              <p style={{ color: isShown === index ? '#FFF' : getColorCard('black') }} className="card_txt">
+              <p title={card.txt} style={{ color: isShown === index ? '#FFF' : getColorCard('black') }} className="card_txt">
                 {card.txt}
               </p>
 
