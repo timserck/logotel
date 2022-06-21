@@ -8,13 +8,14 @@ export interface HeaderProps {
   tabs : Array<String>
   indexActive: number
   isHamCallback : () => void
+  isMobile: boolean
 
 }
 
 
 export const Header : React.FC<HeaderProps> = (props) => {
 
-  const {isHamCallback} = props
+  const {isHamCallback, isMobile} = props
   const HEIGHT_NAV = 70;
 
   const [isHam, setisHam] = useState(false)
@@ -35,12 +36,12 @@ export const Header : React.FC<HeaderProps> = (props) => {
       left: 0,
       top: location - (HEIGHT_NAV),
     })
-     setisHam(!isHam)
+    isMobile && setisHam(!isHam)
   }
 
   useEffect(() => {
-
-    isHam && isHamCallback()
+    
+    isMobile && isHam && isHamCallback()
 
   }, [isHam])
 

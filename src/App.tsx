@@ -1,11 +1,13 @@
 import React, { useState, useLayoutEffect, useEffect } from "react"
 import './App.scss';
 import { Header, Slider, Articles, Timeline, Cards, Footer, Divider } from './Components';
-
+import useDeviceDetect from "./Hooks/useDeviceDetect";
 function App() {
+  const { isMobile } = useDeviceDetect();
   const TABS = ["slider","news", "percorso", "tab"]
   const HEIGHT_NAV = 70;
   const [isHam, setIsHam] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
   const [currentSection, setCurrentSection] = useState(0)
 
@@ -43,8 +45,8 @@ useEffect(() => {
     const handleScroll = (e:Event) => {
 
       setScrolled(window.scrollY > 0)
-     !isHam ||  window.scrollY > 0 ? document.documentElement.style.setProperty("--height-header", "70px") : document.documentElement.style.setProperty("--height-header", "120px")
-     !isHam ||  window.scrollY > 0 ? document.documentElement.style.setProperty("--height-logo", "40px") : document.documentElement.style.setProperty("--height-logo", "60px")
+     !isMobile &&  window.scrollY > 0 ? document.documentElement.style.setProperty("--height-header", "70px") : document.documentElement.style.setProperty("--height-header", "120px")
+     !isMobile && window.scrollY > 0 ? document.documentElement.style.setProperty("--height-logo", "40px") : document.documentElement.style.setProperty("--height-logo", "60px")
 
       const currentIndex = sectionOffsets.findIndex((n: Number) => n >= window.scrollY) - 1
       const currentSection = currentIndex === -1 ? 0 : currentIndex
@@ -65,7 +67,7 @@ useEffect(() => {
 
   return (
     <main className={`${scrolled ? "isScrolled" : ""} main`}>
-      <Header  tabs={TABS} indexActive={currentSection} isHamCallback={isHamCallback}/>
+      <Header isMobile={isMobile}  tabs={TABS} indexActive={currentSection} isHamCallback={isHamCallback}/>
       <Slider  />
       <Articles />
       <Divider />
